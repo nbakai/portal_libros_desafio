@@ -1,7 +1,7 @@
 class CreateOrders < ActiveRecord::Migration[5.2]
   def change
     create_table :orders do |t|
-      t.boolean :paid
+      t.boolean :paid, default: false
       t.references :libro, foreign_key: true
 
       t.timestamps
