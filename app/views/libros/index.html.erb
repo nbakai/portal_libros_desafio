@@ -17,7 +17,8 @@
       <tr>
         <td><%= libro.title %></td>
         <td><%= libro.author %></td>
-        <td><%= libro.price %></td>
+        <td><%= number_to_currency(libro.price, unit: 'CLP$') %></td>
+        <td><%= link_to 'Reservar', libro_orders_path(libro.id), method: :post %> </td>
         <td><%= link_to 'Show', libro %></td>
         <td><%= link_to 'Edit', edit_libro_path(libro) %></td>
         <td><%= link_to 'Destroy', libro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
