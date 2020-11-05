@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :orders, only: :index
   resources :libros
   delete 'order/:id', to: 'orders#destroy', as: 'destroy_order'
+  delete 'orders/clean', to: 'orders#clean', as: 'clean_orders'
   
   resources :billings, only: [] do
     collection do

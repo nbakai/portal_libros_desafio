@@ -7,7 +7,7 @@ class BillingsController < ApplicationController
         end
         items = orders.map do |order|
             item = {}
-            item[:name] = order.libro.name 
+            item[:title] = order.libro.title 
             item[:sku] = order.libro.id.to_s
             item[:price] = order.libro.price
             item[:currency] = 'USD'
